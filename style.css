@@ -1,0 +1,189 @@
+/* FONTE CORRIGIDA */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --gold: #d4af37;
+  --dark: #0d0d0d;
+}
+
+/* RESET */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark);
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.navbar-brand {
+  color: var(--gold) !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: #ccc !important;
+  position: relative;
+}
+
+/* EFEITO LINHA ABAIXO */
+.nav-link::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--gold);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* BOTÕES */
+.btn-warning {
+  background: linear-gradient(45deg, var(--gold), #f5d76e);
+  border: none;
+  color: black;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+              url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  color: var(--gold);
+  font-weight: 700;
+  animation: fadeUp 1s ease;
+}
+
+.hero p {
+  color: #ddd;
+  animation: fadeUp 1.5s ease;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SERVIÇOS (CARDS) */
+.card {
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+.card i {
+  color: var(--gold);
+}
+
+/* SOBRE */
+#sobre {
+  background: linear-gradient(180deg, #111, #000);
+}
+
+#sobre img {
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+/* GALERIA */
+#galeria img {
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+#galeria img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px var(--gold);
+}
+
+/* DEPOIMENTOS */
+.bg-light {
+  background: #111 !important;
+}
+
+.bg-light .shadow {
+  background: #0d0d0d !important;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: #ccc;
+}
+
+/* CONTATO */
+#contato p {
+  color: #bbb;
+}
+
+iframe {
+  border-radius: 10px;
+  filter: grayscale(1);
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  font-size: 0.9rem;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+  transition: 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.15);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
